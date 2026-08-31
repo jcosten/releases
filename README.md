@@ -6,15 +6,15 @@ for what each one does.
 
 | App | What it is | Windows | Linux |
 | --- | --- | --- | --- |
-| [Ruze Chat](#ruze-chat) | Peer-to-peer chat and voice, with no server | Installer | Flatpak |
+| [Ruze](#ruze) | Peer-to-peer chat and voice, with no server | Installer | Flatpak |
 | [AudioToggle](#audiotoggle) | One hotkey to switch audio devices | Installer | Flatpak |
 
-Releases are tagged per project, so `ruze-chat-v0.0.5` and `v1.7.1` can sit in
-the same repo without colliding.
+Releases are tagged per project, so `ruze-v0.0.7` and `v1.7.1` can sit in the
+same repo without colliding.
 
 ---
 
-# Ruze Chat
+# Ruze
 
 **Peer-to-peer, serverless chat.** Servers, channels, voice and everything in
 them live on the machines of the people using them. There is no backend to sign
@@ -58,18 +58,24 @@ whoever else happens to be around.
 
 ## Install
 
-**Windows** — download `ruze-chat_{version}_x64-setup.exe` from the
+**Windows** — download `ruze_{version}_x64-setup.exe` from the
 [latest release](../../releases) and run it.
 
-**Linux** — download `ruze-chat-{version}.flatpak` and install it:
+**Linux** — download `ruze-{version}.flatpak` and install it:
 
 ```bash
-flatpak install ruze-chat-{version}.flatpak
+flatpak install ruze-{version}.flatpak
 flatpak run com.ruze.chat
 ```
 
 The bundle carries the app; Flatpak fetches the GNOME runtime it needs from
 Flathub the first time. Linux builds start at v0.0.6.
+
+Releases before 0.0.7 were published while the app was called Ruze Chat, so
+their files are named `ruze-chat-…` and their tags `ruze-chat-v…`. Same app,
+and it still installs under `com.ruze.chat` either way — that identifier is
+an identity rather than a name, and changing it would have orphaned every
+existing install's data.
 
 ## Good to know
 
