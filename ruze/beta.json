@@ -1,0 +1,19 @@
+{
+  "version": "0.0.13",
+  "notes": "**Windows** — run `ruze_0.0.13_x64-setup.exe`.\n**Linux** — `flatpak install ruze-0.0.13.flatpak`, then `flatpak run com.ruze.chat`.\n**Android** — sideload `ruze-0.0.13.apk`. arm64 devices, Android 8.0 or newer.\n\n---\n\n### Added\n\n- **Ruze tells you when there is a new Ruze.** A new section in settings shows\n  the version you are running, what changed in it and in every release before\n  it, and whether there is a newer one. Checking happens on launch and every\n  few hours, and can be turned off; installing is never automatic.\n\n  How you get an update depends on where you are running, and the app says\n  which rather than pretending they are the same. Windows downloads the\n  installer. Linux is a Flatpak — nothing the app does can replace a read-only\n  sandbox, so it hands you the `flatpak install` line. Android downloads the\n  APK and gives it to the system package installer, which will only accept a\n  build signed with the same key as the one you already have.\n\n- **A beta channel.** One switch, and this device follows releases as they are\n  cut rather than waiting for them to be final. Turning it back off means\n  waiting for stable to catch up — an update never goes backwards, so you are\n  never downgraded into a version you have already passed.\n\n\nBuilt from commit f2d6417169ead087cc5bf060c1a3b25fc80e435d.",
+  "pub_date": "2026-09-01T22:14:03Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.13/ruze_0.0.13_x64-setup.exe",
+      "signature": ""
+    },
+    "android-aarch64": {
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.13/ruze-0.0.13.apk",
+      "signature": ""
+    },
+    "linux-flatpak": {
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.13/ruze-0.0.13.flatpak",
+      "signature": ""
+    }
+  }
+}
