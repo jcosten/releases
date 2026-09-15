@@ -1,18 +1,18 @@
 {
-  "version": "0.0.43",
-  "notes": "**Windows** — run `ruze_0.0.43_x64-setup.exe`.\n**Linux** — `flatpak install ruze-0.0.43.flatpak`, then `flatpak run com.ruze.chat`.\n**Android** — sideload `ruze-0.0.43.apk`. arm64 devices, Android 8.0 or newer.\n\n---\n\n### Fixed\n\n- **The phone app opens first time.** Starting Ruze on Android often sat on\n  \"Loading…\" and then said something \"did not answer\", and pressing Try again\n  always worked. The screen was being drawn, and asking for your account and\n  servers, before the app behind it had finished starting — and on Android\n  those early questions were simply lost rather than answered late. The window\n  now appears only once there is something ready to answer it.\n\n- **A call rings on a desktop that keeps friends in their own window.** With\n  the friends list in a window of its own, the \"is calling\" prompt was meant to\n  appear there and appeared nowhere, so calls from a phone never rang. It now\n  rings in the friends window, and answering opens the conversation with the\n  call in it.\n\n- **The desktop sees that you answered.** A call placed from a popped-out\n  conversation went on showing \"Calling…\" with the ringback playing after the\n  other person had picked up, and the people and cameras in a call started from\n  that window did not update. That window now follows the call as it happens.\n\n- **Hanging up ends the call for both of you.** Hanging up only took you out of\n  the call: the other person was left in it alone, and your own device promptly\n  rang again from the call you had just ended. Either side hanging up now ends\n  it at both ends, and a call that stops hearing from the other person ends on\n  its own shortly after.\n\n\nBuilt from commit 44089bcd78d5eb2fe3e253426bc15396e011370c.",
-  "pub_date": "2026-09-14T21:27:28Z",
+  "version": "0.0.44",
+  "notes": "**Windows** — run `ruze_0.0.44_x64-setup.exe`.\n**Linux** — `flatpak install ruze-0.0.44.flatpak`, then `flatpak run com.ruze.chat`.\n**Android** — sideload `ruze-0.0.44.apk`. arm64 devices, Android 8.0 or newer.\n\n---\n\n### Changed\n\n- **Devices on the same Wi-Fi are connected the way iroh chooses.** Ruze used\n  to overrule the networking library on which route each connection took —\n  straight across the local network, or through a relay — with rules of its\n  own. Two phones on one Wi-Fi were the case that did not work: slow to send\n  a friend request and never exchanging messages, while the same two phones\n  talked fine over mobile data. Those rules are gone, and iroh, which is\n  built and tested for exactly this, decides.\n\n- **Up to date underneath.** The networking library, iroh, moves to 1.2, along\n  with Svelte, Vite, the Tauri plugins and the cryptography libraries.\n\n### Fixed\n\n- **Your webcam works in a call from a friend's own window.** With friends in\n  a window of their own, a call is shown in the conversation's window, and on\n  Linux the camera was refused there with \"NotAllowedError\" — the permission\n  to use it had only ever been given to the main window. On Windows the\n  permission was settled on the main window instead of the one asking.\n\n- **A damaged backup file or encrypted message is reported, not a crash.** One\n  with a malformed header could stop the app outright; it is now read as the\n  damaged file it is.\n\n\nBuilt from commit 3e2152df886a4d23894ffc85f52010d49a82af36.",
+  "pub_date": "2026-09-15T00:01:06Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.43/ruze_0.0.43_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRVTRuV2dISnBMaUlCT2piZlo1K1l4cjMxWER3RS9aZDg4QmIvRmhab3hLamZsRGREQmFUcjdXcFB3NGlOT3pOV3RmSW52aVZ2UVcxWkVCWXA5L01MLzBkMVlxVzc5emcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NDIxMDU1CWZpbGU6cnV6ZV8wLjAuNDNfeDY0LXNldHVwLmV4ZQp1bEJOMk16aHVEMEo2OVA4cjhJQ2dhSzJpVG9QVGxnd2F2dUpnamdtaWhxZk9lc3pSbkJxeEdmd20ybGI2MlEvZldHZTVLS1hRM0xYTDFnSVh4M2FCUT09Cg=="
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.44/ruze_0.0.44_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRVTRuV2dISnBMaU5RK3IrVFB2QVFWdmwzMTk3OHlHZkU3U2lBdGpaeS9EbXBhcmtpY2ZwbThxWWIyTVhERnZaZktDT2I0dWZFNmc4SDRCUWNmdmJJV3dRNDRVTDZTdmdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5NDMwMTU5CWZpbGU6cnV6ZV8wLjAuNDRfeDY0LXNldHVwLmV4ZQpJY1NrNjd1R0l5Vy9KcnVpeGJxZk9IN3ZhbXBYdUZrYjVHeUJKT2daVFZhZDVJcmxqUXlIeGNvQU12Qll0SkppckZCQkN6alhrRGd0b3VSbzlvSXBBZz09Cg=="
     },
     "android-aarch64": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.43/ruze-0.0.43.apk",
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.44/ruze-0.0.44.apk",
       "signature": ""
     },
     "linux-flatpak": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.43/ruze-0.0.43.flatpak",
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.44/ruze-0.0.44.flatpak",
       "signature": ""
     }
   }
