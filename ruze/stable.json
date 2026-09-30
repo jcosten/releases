@@ -1,18 +1,18 @@
 {
-  "version": "0.0.47",
-  "notes": "**Windows** — run `ruze_0.0.47_x64-setup.exe`.\n**Linux** — `flatpak install ruze-0.0.47.flatpak`, then `flatpak run com.ruze.chat`.\n**Android** — sideload `ruze-0.0.47.apk`. arm64 devices, Android 8.0 or newer.\n\n---\n\nA layout release: more of the window is used, and the people in it are\neasier to reach.\n\n### Changed\n\n- **The conversation uses the whole window.** Messages and the box you type\n  in used to sit in a fixed column down the middle, however wide the window\n  was, leaving the sides empty. They now span the pane. Link previews,\n  pictures and videos are allowed to be larger too.\n\n- **The member list stays open beside the conversation.** In a window wide\n  enough for it, the list is a column of its own instead of a panel that\n  slid out over the messages and had to be opened each time. The members\n  button in the header hides it and brings it back. In a narrow window or on\n  a phone it still slides out as before.\n\n- **Everyone in a voice room is listed by name, one to a line.** A room's\n  card used to show a row of up to three overlapping faces. Now it lists\n  everyone, and clicking a name — not only right-clicking it — opens their\n  volume and profile. Anybody muted has a crossed-out microphone beside\n  their name.\n\n- **Online dots are bright green and a little bigger.** In the dark theme\n  they were a muted sage that was hard to tell apart from offline grey.\n\n- **Text channels in the sidebar are larger** and easier to click.\n\n### Fixed\n\n- **The members button no longer shows a bright outline while the list is\n  open.**\n\n- **A post from X no longer has a white band beneath it** in the dark theme.\n\n\nBuilt from commit adfdc533352df112b80ebac831168751f15d25c4.",
-  "pub_date": "2026-09-27T03:30:27Z",
+  "version": "0.0.48",
+  "notes": "**Windows** — run `ruze_0.0.48_x64-setup.exe`.\n**Linux** — `flatpak install ruze-0.0.48.flatpak`, then `flatpak run com.ruze.chat`.\n**Android** — sideload `ruze-0.0.48.apk`. arm64 devices, Android 8.0 or newer.\n\n---\n\nYou can call somebody by name in a channel now, and pictures and files\nshared in a channel open again.\n\n### Added\n\n- **Mention somebody with @.** Type `@` in a channel and the people in the\n  server are offered as you type; pick one with Enter, Tab or a click and\n  their name goes into your message. They get the red badge, the reply\n  chime and a notification saying you mentioned them, and the message is\n  marked in their channel so they can find it. Somebody still on an older\n  version sees your message with the `@name` in it, without the\n  notification.\n\n### Fixed\n\n- **Pictures and files in private channels open again.** Since 0.0.27, a\n  picture or file shared in a private channel showed \"could not find who is\n  sharing this file\" in place of the picture, for everybody else in the\n  channel, and for the person who sent it once Ruze had been restarted.\n  Every new text channel is private, so this was nearly every file. Nothing\n  was lost and nothing needs sending again: on this version the older ones\n  open too, as long as whoever shared them is online.\n\n\nBuilt from commit a0e8bf0bde0188ab7d67d4b51084eb4e92a683bc.",
+  "pub_date": "2026-09-30T15:06:35Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.47/ruze_0.0.47_x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRVTRuV2dISnBMaUlxWDNjOXo5S2hKYVRkVTVXR2dLVDZKc3lWajlwY082aFBjQXdLM1puMDJHVDRyWTRRWWUxK3hYMVB0VWdtbEhkc0p3WVJQN21wNm4rbmJJM1VBN2dnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNDc5NzM1CWZpbGU6cnV6ZV8wLjAuNDdfeDY0LXNldHVwLmV4ZQpJQzJSaDdBeVVlZ3dubDI2VmdwNG1ONXdFZmpqQzVrUHFGbG9NQmxRZ3lCT29aY2txSldUcTRQWDNnV004SCttb2dSeXhTcnE2dWhEbVRnY2lDcnFEdz09Cg=="
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.48/ruze_0.0.48_x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRVTRuV2dISnBMaURiaVRQM0ozMUxKR0M0SFlEaDlwK0RLQVFhcXVKYWJtbllGNDZzR3RiRVNWM2tzTVJCRkVTZEpFd2tyVFAxOTVQVjRPOXBjV3duQSswcFJES1M1K2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNzgwNTM3CWZpbGU6cnV6ZV8wLjAuNDhfeDY0LXNldHVwLmV4ZQpDc0p0bGR5VlRpK3dHbHowNEx1UzRQNnN4YmJveUFKZEtMaXhUQjB0OExPUVBvK3FqMDVSaXlkNHY2YjlBUWVpdGtwTDQ0emtXZFA4QUgzR0lxZXRDdz09Cg=="
     },
     "android-aarch64": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.47/ruze-0.0.47.apk",
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.48/ruze-0.0.48.apk",
       "signature": ""
     },
     "linux-flatpak": {
-      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.47/ruze-0.0.47.flatpak",
+      "url": "https://github.com/jcosten/releases/releases/download/ruze-v0.0.48/ruze-0.0.48.flatpak",
       "signature": ""
     }
   }
